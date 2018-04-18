@@ -12,7 +12,13 @@
 //add the returned value from iteratee tp myNewArray
 //after looping, return  myNewArray
 function map(array, iteratee){
-
+ 
+        let newArr = [];
+        for(let i = 0; i < array.length; i++){
+           newArr.push(iteratee(arr[i]))
+         }
+        
+         return newArr
 }
 
 //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter
