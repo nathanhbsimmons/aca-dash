@@ -12,13 +12,11 @@
 //add the returned value from iteratee tp myNewArray
 //after looping, return  myNewArray
 function map(array, iteratee){
- 
-        let newArr = [];
+        let newArray = [];
         for(let i = 0; i < array.length; i++){
-           newArr.push(iteratee(arr[i]))
+           newArray.push(iteratee(array[i]))
          }
-        
-         return newArr
+        return newArray
 }
 
 //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter
@@ -31,7 +29,13 @@ function map(array, iteratee){
 //iteratee will return true or false, if true add the item to myNewArray else do not
 //after looping, return myNewArray
 function filter(array, iteratee){
-
+    let newArray = [];
+        for(let i = 0; i < array.length; i++){
+           if (iteratee(array[i])) {
+            newArray.push(array[i])
+           } 
+         }
+        return newArray
 }
 
 //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/find
