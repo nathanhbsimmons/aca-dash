@@ -34,6 +34,7 @@ function filter(array, iteratee){
            if (iteratee(array[i])) {
             newArray.push(array[i])
            } 
+
          }
         return newArray
 }
@@ -45,7 +46,11 @@ function filter(array, iteratee){
 //fnc will return true or false, if true return the item 
 //after looping, return null
 function find(theArray, fnc){
-
+    for(let i = 0; i < theArray.length; i++){
+        if (fnc(theArray[i])) {
+         return theArray[i]
+        } 
+      }
 }
 
 
