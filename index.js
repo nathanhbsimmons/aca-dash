@@ -65,7 +65,13 @@ function head(theArray) {
 //loop theArray in reverse order
 //add the item from each loop to the new array
 //return the new array
-function reverse(theArray) {}
+function reverse(theArray) {
+  let newArray = []
+  for (let i = 0; i < theArray.length; i++) {
+    theArray.splice(i, 0, newArray.push(theArray.pop()))
+  }
+  return newArray;
+}
 
 //create a new array
 //loop theArray
