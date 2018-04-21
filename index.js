@@ -77,7 +77,13 @@ function reverse(theArray) {
 //loop theArray
 //add the item from each loop to the new array except the first item
 //return the new array
-function tail(theArray) {}
+function tail(theArray) {
+  let newArray = []
+  for (let i = 1; i < theArray.length; i++) {
+    newArray.push(theArray[i])
+  }
+  return newArray;
+}
 
 //implement the most basic sorting algorithm there is
 //assume the array will always have numbers
