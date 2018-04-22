@@ -95,7 +95,22 @@ function tail(theArray) {
 //if a swap is done set it to true
 //after each for loop check the variable, if true, continue the while loop
 //if false return theArray
-function sort(theArray) {}
+function sort(theArray) {
+  var notSorted = false;
+  while (notSorted === false) {
+    notSorted = true;
+    for (var i = 1; i < theArray.length; i ++) {
+      if (theArray[i - 1] > theArray[i]) {
+        notSorted = false;
+        var tmp = theArray[i - 1];
+        theArray[i - 1] = theArray[i];
+        theArray[i] = tmp;
+      }
+    }
+  }
+
+  return theArray;
+}
 
 exports.map = map;
 exports.filter = filter;
