@@ -53,12 +53,12 @@ function find(theArray, fnc) {
 
 //return the last item in theArray
 function findLast(theArray) {
-  return theArray.pop();
+  return theArray[theArray.length - 1];
 }
 
 //return the first element of the array
 function head(theArray) {
-  return theArray.shift();
+  return theArray[0];
 }
 
 //create a new array
@@ -66,9 +66,9 @@ function head(theArray) {
 //add the item from each loop to the new array
 //return the new array
 function reverse(theArray) {
-  let newArray = []
+  let newArray = [];
   for (let i = 0; i < theArray.length; i++) {
-    theArray.splice(i, 0, newArray.push(theArray.pop()))
+    theArray.splice(i, 0, newArray.push(theArray.pop()));
   }
   return newArray;
 }
@@ -78,9 +78,9 @@ function reverse(theArray) {
 //add the item from each loop to the new array except the first item
 //return the new array
 function tail(theArray) {
-  let newArray = []
+  let newArray = [];
   for (let i = 1; i < theArray.length; i++) {
-    newArray.push(theArray[i])
+    newArray.push(theArray[i]);
   }
   return newArray;
 }
@@ -99,7 +99,7 @@ function sort(theArray) {
   let notSorted = false;
   while (notSorted === false) {
     notSorted = true;
-    for (let i = 1; i < theArray.length; i ++) {
+    for (let i = 1; i < theArray.length; i++) {
       if (theArray[i - 1] > theArray[i]) {
         notSorted = false;
         let comparisonNum = theArray[i - 1];
