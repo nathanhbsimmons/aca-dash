@@ -99,16 +99,15 @@ function sort(theArray) {
   let notSorted = false;
   while (notSorted === false) {
     notSorted = true;
-    for (let i = 1; i < theArray.length; i++) {
-      if (theArray[i - 1] > theArray[i]) {
+    for (let i = 0; i < theArray.length; i++) {
+      if (theArray[i + 1] < theArray[i]) {
         notSorted = false;
-        let comparisonNum = theArray[i - 1];
-        theArray[i - 1] = theArray[i];
+        let comparisonNum = theArray[i + 1];
+        theArray[i + 1] = theArray[i];
         theArray[i] = comparisonNum;
       }
     }
   }
-
   return theArray;
 }
 
